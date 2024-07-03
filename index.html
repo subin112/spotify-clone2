@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/png;base64,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">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>spotify - Web Coding</title>
+</head>
+<body>
+  <div class="flex-area">
+       <div class="sidebar">
+        <div class="sidebar-nav">
+          <div class="logo">
+            <a href=""><img src="images/logo-new.png" alt=""></a>
+        </div>
+           
+        <ul>
+          <li><a href="">  
+            <span><i class="fa-sharp fa-solid fa-house"></i></span>
+            <span>Home</span>
+        </a></li>
+         <li><a href="">
+               <span><i class="fa-solid fa-magnifying-glass"></i></span>
+               <span>Search</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <div class="sidebar-nav box2">
+
+      <ul>
+          
+         <span><i class="fa-solid fa-book"></i></span> 
+         <span class="library">Your Library</span>
+       </a></li>  
+
+       <li>
+           <div class="sidebar-scroll">
+             <div class="creat-playlist">
+           <h4>create your first playlist</h4>
+            <p> It's easy, we'll help you</p>
+            <button>create Playlist</button>
+          </div>
+          <div  class="creat-playlist">
+            <h4>Create your first playlist</h4>
+             <p> It's easy, we'll help you</p>
+             <button>Create Playlist</button>
+           </div>
+         </div>
+       </li>
+    </ul>
+  </div> 
+  
+<div class="privacy">
+<ul>
+ <li>
+   <a href="">Legal</a>
+   <a href="">Safety & Privacy Center</a>
+   <a href="">Privacy Policy</a>
+ </li>
+ <li>
+     <a href="">Cookies</a>
+     <a href="">About Ads</a>
+     <a href="">Accessibility</a>
+     </li>
+     <li>
+       <a href="">cookies</a>
+
+   </li>
+ </ul>
+</div>
+
+  <div class="eng-btn">
+    <button>English</button>
+  </div>
+
+</div>
+
+
+<div class="flex-box">
+
+   
+      <div class="top-nav">
+        <div class="prev-btn">
+     <div class="right">
+      <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16"><path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg>
+     <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16"><path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path></svg>
+     </div>
+  
+     </div>
+
+    <div class="login-btn">
+    <button class="login">sign up</button>
+    <button class="login">Login</button>
+      </div>
+</div>
+
+<div class="spotify-playlist">
+  <h2>Popular artists</h2>
+  <div class="card">
+
+    <div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Pritam</h4>
+      <p>Artist</p>
+        </div>
+
+<div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Arjit singh</h4>
+      <p>Artist</p>
+    </div>
+
+<div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>A.R Rahman</h4>
+      <p>Artist</p>
+    </div>
+
+<div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616100005174fc7c542c04b5f7dc8f1b1c16" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Anirudh ravichander</h4>
+      <p>Artist</p>
+    </div>
+    
+<div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616100005174a038d7d87f8577bbb9686bd3" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Sachin-Jigar</h4>
+      <p>Artist</p>
+    </div>
+
+<div class="item-bar">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616100005174fb13d10be20fdcb5a670f551" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 MxmW8QkHqHWtuhO589PV yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Vishal Mishra</h4>
+      <p>Artist</p>
+    </div>
+
+  </div>
+
+    </div>
+
+
+
+
+     <div class="spotify-playlist">
+      <h2>Popular Album</h2>
+      <div class="card">
+        <div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e029bb2d30b01ac2cada8a8ad03" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>Ek The Raja</h4>
+          <p>Badshah</p>
+          </div>
+
+        <div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>ANIMAL</h4>
+          <p>Manan Bhardwaj,Vishal Mishra,Jaani</p>
+        </div>
+
+<div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>Ashique 2</h4>
+          <p>Mithoon,Ankit Tiwari,Jeet Gannguli</p>
+        </div>
+
+<div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e021d1cc2e40d533d7bcebf5dae" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>Moosetape</h4>
+          <p>Sidhu Moose Wala</p>
+        </div>
+        
+<div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>Sajni(From "Laapataa..</h4>
+          <p>Raam Sampanth,Arjith Singh,Prashant PandeyPrashant Pandey</p>
+        </div>
+        
+<div class="item">
+          <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d00001e021a8c4618eda885a406958dd0" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+          <div class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+          </div>
+          <h4>Still rollin</h4>
+          <p>Shubh</p>
+        </div>
+        </div>
+  
+</div>
+
+<div class="spotify-playlist">
+  <h2>Featured Chart</h2>
+  <div class="card">
+
+    <div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/07iEy1AecUPVzfC2J2gCHR/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>ANIMAL</h4>
+      <p></p>
+        </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/4YRxDV8wJFPHPTeXepOstw/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Still Rollin</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/70B80Lwx2sxti0M1Ng9e8K/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Husn</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/2ae6PxICSOZHvjqiCcgon8/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Moosetape</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+    
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/1mYsTxnqsietFxj1OgoGbG/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/2FKWNmZWDBZR4dE5KX4plR/en-GB" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+  </div>
+
+    </div>
+
+  <div class="spotify-playlist">
+  <h2>Popular radio</h2>
+  <div class="card">
+    <div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>ANIMAL</h4>
+      <p></p>
+        </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_us_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Still Rollin</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Husn</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_us_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Moosetape</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+    
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_us_default.jpg" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+  </div>
+
+    </div>
+
+
+<div class="spotify-playlist">
+  <h2>Spotify Playlists</h2>
+  <div class="card">
+    <div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f000000024fd2f505388dffac41bf82d3" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>ANIMAL</h4>
+      <p></p>
+        </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f000000027cd703bbfec2f1e86c879bec" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Still Rollin</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f000000024b04e77913de1fc2a4b819df" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Husn</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002a6a35d85da2b230f63a0005a" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Moosetape</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+    
+<div class="item">
+<img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002d497c6e15e12d5ff9df6e5f9" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002a79aa912d12b40e0f1c88f39" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+  </div>
+
+    </div>
+
+
+    <div class="spotify-playlist">
+  <h2>Trending Episodes</h2>
+  <div class="card">
+    <div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f9f5d8dab58a909ef23fee583" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>ANIMAL</h4>
+      <p></p>
+        </div>
+
+<div class="item">
+      <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f099a357ed0a2a39424f2903d" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Still Rollin</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f9d2abc777125c182cf99b60f" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Husn</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f9d2abc777125c182cf99b60f" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>Moosetape</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+    
+<div class="item">
+<img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f36dbb0b2d65004488fcc322f" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+<div class="item">
+  <div class="it">
+     <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67656300005f1f65fc4856285f7fcb49c08d43" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj">
+      </div>
+     <div class="play-btn">
+        <span><i class="fa-solid fa-play"></i></span>
+      </div>
+      <h4>satrang(From..)</h4>
+      <p>Manan Bhardwaj,Vishal Mishra, Jaani</p>
+    </div>
+
+  </div>
+
+    </div>
+
+
+    
+   
+    <div class="footer-down">
+          
+  <div class="footer-section">
+      <div class="footer">
+        <div class="footer-link">
+          <div class="footer-coloum">
+            <div>Company</div>
+            <ul class="col-link">
+              <li><a href="">For Artists</a></li>
+              <li<a href=""></a>Developers</li>
+              <li><a href="">Advertising</a></li>
+              <li><a href="">Investors</a></li>
+              <li><a href="">Vendors</a></li>
+            </ul>
+          </div>
+  <div class="footer-coloum">
+            <div>Company</div>
+            <ul class="col-link">
+              <li><a href="">Suppot</a></li>
+              <li<a href=""></a>Free Mobile app</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+           <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+    <p class="copyright">&copy; 2024 spotify AB</p>
+  </div>
+
+
+
+ </div>
+<div class="preview">
+   <div class="text">
+    <h4> preview of spotify</h4>
+    <p>sign up to get unlimited songs and podcasts with occasional</p>
+    ads. No credit card needed.</p>
+   </div>
+</div>
+  <div class="button">
+      <button>sign up free</button>
+</div>
+
+
+
+
+
+</body>
+</html>

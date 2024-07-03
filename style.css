@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: regular;
+    src: url(fonts/CircularSp-Book-a00e99ef9996a3a157fb6b746856d04f.woff2);
+}
+@font-face {
+    font-family: medium;
+    src: url(fonts/CircularSp-Bold-602e7aefc706aa36c6ec1324b9bbc461.woff2);
+}
+@font-face {
+    font-family: bold;
+    src: url(fonts/CircularSpTitle-Bold-b2586b06a2e1522e9d879d84c2792a58.woff2);
+}
+@font-face {
+    font-family: roboto;
+    src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(fonts/KFOlCnqEu92Fr1MmEU9fBBc4\(1\).woff2);
+}
+
+
+body{
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar{
+    width: 446px;
+    background: #030303;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+
+}
+
+.sidebar-nav{
+    background: #111111;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+ }
+
+.sidebar-nav .logo{
+    width: 120px;
+}
+
+.sidebar-nav .logo img{
+    width: 100%;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+.sidebar-nav ul li{
+    padding: 10px 20px;
+}
+
+
+.sidebar-nav ul li:hover {
+    color: #fff;
+}
+
+.sidebar-nav ul li a{
+     text-decoration: none;
+     color: #b3b3b3;
+     font-size: 16px;
+     font-weight: 600;
+}
+.sidebar-nav ul li a  i {
+     font-size: 20px;
+     margin-right: 10px;
+}
+
+.library::after{
+    content: '+';
+    float: right;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.creat-playlist{
+    background: #382f2f;
+    padding: 30px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;  
+}
+.sidebar-scroll{
+    height: 120px;
+    overflow: auto;
+}
+.sidebar-scroll::-webkit-scrollbar{
+    background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb{
+    background: transparent;
+    width: 10px;
+}
+.sidebar-scroll:hover::-webkit-scrollbar-thumb{
+     background: #5c5b5b;
+     width: 10px;
+}
+
+.create-playlist h4{
+    color: #fff;
+    font-size: 15px;
+}
+.create-playlist p{
+    color: #fff;
+    font-size: 12px;
+    margin:12px 0;
+}
+.create-playlist button{
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.privacy ul li a{
+    text-decoration: none;
+    color: #575656;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.privacy ul li aa:hover{
+    text-decoration: none;
+    color: #575656;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.privacy ul{
+    list-style: none;
+    margin-top: 10px;
+
+}
+.privacy ul li{
+    padding:0 12px;
+    padding-bottom: 8px;
+}
+
+.eng-btn{
+    padding: 20px 30px;
+}
+
+.eng-btn button{
+    padding: 10px 30px;
+    background: transparent;
+    border:0;
+    outline: none;
+    color:#ffffff;
+    border: 1px solid  #818080;
+    border-radius: 20px;
+    margin: 10px 0;
+
+}
+
+.eng-btn button:hover{
+    padding:11px 31px;
+    border:1px solid #fff,
+}
+
+.main-section{
+    
+    background: #18181818;
+    height: 100px;
+    /* overflow-y: auto; */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.main-section::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+     background: #5c5b5b;
+}
+
+
+.main-section .top-nav{
+    padding: 20px 30px;
+    background: #2e2c2c;
+    display: block;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.main-section .top-nav .preview-btn button i{
+    color: #838181;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+
+.top-nav .login-btn .sign-up{
+    color: #838181;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.top-nav .login-btn .sign-up:hover{
+    color: #ffffff;
+}
+
+.top-nav .login-btn .login{
+     color:#242323;
+     font-size: 16px;
+     font-weight: 600;
+     background: #fff;
+     padding: 10px 15px;
+     border-radius: 20px;
+}
+.top-nav .login-btn .login{
+    color:#242323;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.spotify-playlist h2{
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.spotify-playlist .card{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+.spotify-playlist .card .item{
+    width: 100%;
+    /* background-color: #272626; */
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.spotify-playlist .card .item:hover{
+    background-color: #3d3c3c;
+}
+.spotify-playlist .card .item img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.spotify-playlist .item h4{
+    color: #fff;
+
+}
+.spotify-playlist .item p{
+    color: #fff;
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+.spotify-playlist .item p:hover{
+    text-decoration: underline;
+}
+.spotify-playlist .play-btn{
+    position: relative;
+}
+.spotify-playlist .play-btn i{
+    position: absolute;
+    background: #1db954;
+    border-radius: 50%;
+    padding: 10px;
+    right: 8px;
+    /* top: -var(); */
+    opacity: -1;
+    transition: 0.6s;
+}
+.spotify-playlist .card .item:hover .play-btn{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+ .footer-section{
+    padding: 20px 40px;
+ }
+ .footer-section .footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+ }
+
+ .footer-section .footer .footer-link{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px,
+}
+
+.footer-section .footer .footer-link .footer-coloum{
+    margin: 0 12px;
+
+}    
+.footer-section .footer .footer-link div{
+    color:#fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-section .footer .footer-link ul li{
+    margin: 6px 0;
+}
+.footer-section .footer .footer-link ul li a{
+    text-decoration: none;
+    color: #969393;
+    font-size: 14px;
+    cursor: pointer;
+}
+.footer-section .footer .footer-link ul li a:hover{
+    text-decoration: underline;
+    color: #fff;
+
+}
+
+.footer .social-links i {
+    color: #fff;
+    background: #353434;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.footer .social-links i:hover{
+        background: #636262;
+    
+}
+
+hr{
+    margin: 20px 40px;
+    border: 0;
+    outline: 0;
+    border: 1px solid #575656;
+    margin: 40px;
+}
+
+.copyright{
+    padding: 0 40px;
+    color: #969393;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.preview{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 40px;
+}
+
+.preview h4{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.preview p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+.preview button{
+    padding: 8px 20px;
+    border: 0;
+    outline:0;
+    border-radius: 20px ;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+.flex-area{
+   display: flex; 
+    padding-left: 27%;
+}
+.flex-box{
+    display: block;
+    padding: 0 10px;
+    
+}
+.footer-down{
+    display: block;
+}
+.top-nav{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding: 20px 40px;
+    padding-left: 0;
+    position: relative;
+}
+.footer-down{
+position: relative;
+
+
+}
+.right{
+    display: flex;
+    gap: 20px;
+}
+.right svg{
+width: 16px;
+height: 16px;
+background-color: #000;
+fill: white;
+top: 20px;
+}
+.item-bar img{
+    /* position: absolute; */
+    border-radius: 50%;
+    width: 100%;
+    height: 70%;
+}
+    .item-bar{
+        width: 100%;
+        position: relative;
+    }
+    .item-bar h4{
+        color: white;
+    }
+    .item-bar p{
+        color: white;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    .item img{
+        object-fit: cover;
+
+    }
+    .it{
+        width: 100%;
+    }
+    .it img{
+    width: 20px;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+    }
